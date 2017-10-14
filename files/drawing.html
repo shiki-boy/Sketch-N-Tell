@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sketch n Tell</title>
+
+  <!-- CSS  -->
+  <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+
+    <style type="text/css">
+        body{
+            background: whitesmoke;
+            margin: 0;
+        }
+        canvas{
+             display: block;
+	    }
+        .dropdown-content{
+            overflow-y: inherit;
+        }
+        ul#colors.dropdown-content.active{
+            height:500%;
+            transform: translateY(-17%);
+            border-radius: 5px;
+        }
+        #limegreen{
+            background: limegreen;
+        }
+        #purple{
+            background: purple;
+            margin-top: 9px; 
+        }
+        #indianred{
+            background: indianred;
+        }
+        #blue{
+            background: blue;
+        }
+    </style>
+    
+    <body>
+        <canvas id=""></canvas>
+        
+        <div class="fixed-action-btn horizontal click-to-toggle">
+            <a class="btn-floating btn-large red">
+                <i class="large material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating red dropdown-button" data-activates='colors'>
+                    <i class="material-icons">palette</i></a></li>
+                <li><a class="btn-floating blue"><i class="material-icons">lens</i></a></li>
+                <li><a class="btn-floating green" id="clear"><i class="material-icons">delete</i></a></li>
+            </ul>
+
+        </div>
+
+        <ul id="colors" class="dropdown-content">
+            <li><a id="limegreen" href="#!" ></a></li>
+            <li><a id="purple" href="#!"></a></li>
+            <li><a id="blue" href="#!"></a></li>
+            <li><a id="indianred" href="#!"></a></li>
+        </ul>
+
+        <!--  Scripts-->
+        <script src="jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="drawing2.js"></script>
+    </body>
+</html>
