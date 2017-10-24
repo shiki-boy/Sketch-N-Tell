@@ -14,7 +14,7 @@ ctx.lineJoin = "round";
 ctx.lineCap = "round";
 ctx.shadowBlur = 0.5;
 ctx.shadowColor = 'blue'; 
-ctx.lineWidth = 5;
+ctx.lineWidth = 10;
 
 $(document).ready(()=>{
 
@@ -123,8 +123,14 @@ $(document).ready(()=>{
         ctx.clearRect(0,0,canvas.width,canvas.height);
     });
 
-    $('#limegreen,#purple,#blue,#indianred').click(function(){
+    $('#limegreen,#blue,#indianred').click(function(){
         mycolor = this.id;
+        ctx.shadowColor = this.id;
+    });
+
+    $('#blue-shadow,#red-shadow,#limegreen-shadow,#none-shadow').click(function(){
+         ctx.shadowColor = this.id.split('-')[0];
+         ctx.shadowBlur = 10;
     });
 });
 
