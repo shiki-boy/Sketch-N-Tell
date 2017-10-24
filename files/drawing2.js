@@ -14,7 +14,7 @@ ctx.lineJoin = "round";
 ctx.lineCap = "round";
 ctx.shadowBlur = 0.5;
 ctx.shadowColor = 'blue'; 
-ctx.lineWidth = 10;
+ctx.lineWidth = 5;
 
 $(document).ready(()=>{
 
@@ -130,7 +130,7 @@ $(document).ready(()=>{
 
     $('#blue-shadow,#red-shadow,#limegreen-shadow,#none-shadow').click(function(){
          ctx.shadowColor = this.id.split('-')[0];
-         ctx.shadowBlur = 10;
+         ctx.shadowBlur = 8;
     });
 });
 
